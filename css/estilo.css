@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  "FILL" 0,
+  "wght" 400,
+  "GRAD" 0,
+  "opsz" 24;
+}
+
+body {
+  font-size: 11px;
+  font-family: 'Ubuntu Mono', monospace;
+  font-weight: 400;
+}
+
+a,h1,h2,h3,h4,h5,h6 {
+  font-weight: 700;
+  font-size: 1.5em; /* em significa que o texto vai ser multiplicado pelo valor inicial - nesse caso 11px -> 1px*1.5=16.5px */
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+.site {
+  max-width: 1200px; /* largura max de 1200px */
+  width: 100%;
+  margin: 0 auto;
+}
+
+.faixa {
+  background: #000;
+}
+
+.faixa div {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+.faixa div div a {
+  display: flex;
+  align-items: center;
+}
+
+.faixa div div a:nth-child(1) {
+  margin-right: 50px;
+}
+
+.faixa div div a span {
+  color: #e79924;
+  margin-right: 3px;
+}
+
+.faixa div ul {
+  display: flex;
+}
+
+.faixa div ul li {
+  margin-right: 30px;
+}
+
+/* ################# FAIXA MENU ###############*/
+
+.faixaMenu div {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  align-items: center;
+}
+
+.faixaMenu h1 {
+  width: 255px;
+  height: 126px;
+  background: url(../img/logo-auto-mestre.svg) no-repeat;
+  text-indent: -9999px;
+}
+
+/*separação dos elementos pelo a, se ao invés de nav fosse outra div o .faixaMenu pegaria todos os as nas duas divs*/
+/*botão de telefone*/
+.faixaMenu div div a {
+  background: #e79924;
+  padding: 15px;
+  margin-left: 40px;
+  border: #a3a2ad solid 1px; /* a borda pode ser solid, tracejada, shadow*/
+  border-radius: 10px 5px; /*deixa o botão com as bordas redondas*/
+}
+.faixaMenu div div a:hover {
+  background: #a3a2ad;
+  border: #e79924 solid 1px; /* a borda pode ser solid, tracejada, shadow*/
+}
+
+/*################ MENU ############*/
+
+.menu{
+  display: flex;
+  align-items: center;
+}
+
+.menu ul{
+  display: flex;
+}
+
+.menu ul li{
+  margin: 0 5px;
+}
+
+.subMenu{
+  display: none!important;
+  position: absolute; /*relativo - pega apartir da onde foi criado, absoluto - pega x0 e y0, fixed - fica fixado na tela*/
+  padding-top: 15px;
+}
+
+.menu ul li:hover > .subMenu{
+  display: block!important;
+  padding-top: 15px;
+}
+
+.subMenu li{
+  margin-bottom: 20px!important;
+}
+
+.menu ul li a{
+  background: #e79924;
+  padding: 5px 15px;
+  border: #a3a2ad solid 1px;
+  border-radius: 10px 5px;
+}
+.menu ul li a:hover{
+  background: #a3a2ad;
+  border: #e79924 solid 1px;
+}
+
+/*botao orçamento*/
+.menu > a{
+  background: #e79924;
+  padding: 25px;
+  margin-left: 40px;
+  border:#a3a2ad solid 1px;
+  border-radius: 10px 5px;
+}
+
+.menu > a:hover{
+  background: #a3a2ad;
+  border:#e79924 solid 1px;
+}
+
+/*####################### SESSÃO SOBRE #######################*/
+
+/*DIV TEM UMA RELEVANCIA 0, HEADER E SECTION TEM UMA RELEVANCIA
+MAIOR (exemplo da caixa frágio), E O MAIN MAIOR AINDA - poder semântico
+dentro do site o MAIN vai tratar dos tópico central da página*/
+
+.sobre {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 0;
+}
+
+.sobre div {
+  width: 45%; /*evitar usar medidas fixas na horizontal pq ñ é legal ter scroll na horizontal, ja na vertical isso pode ser feito*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sobre h2 {
+  font-size: 2em;
+  color: #e79924;
+  font-weight: 700;
+}
+
+.sobre p {
+  font-size: 1.5em;
+  text-align: justify;
+  line-height: 2em; /*espaçamento entre linhas*/
+}
+
+.sobre a {
+  background: #e79924;
+  padding: 5px 15px;
+  border: #a3a2ad solid 1px;
+  border-radius: 10px 5px;
+  width: 30%;
+  text-align: center;
+  align-self: flex-end; /*pesquisar + sobre*/
+}
+.sobre a:hover {
+  background: #a3a2ad;
+  border: #e79924 solid 1px;
+}
+
+.sobre div:nth-child(2) img{
+  width: 63%;
+}
+
+.sobre div:nth-child(2) img:nth-child(2){
+  align-self: flex-end;
+  margin-top: -100px; /*pra subir a imagem e ficar uma em cima da outra*/
+}
+
+/*####################### SESSÃO SERVICO #######################*/
+
+.servico{
+  background: #333;
+  padding-top: 40px;
+}
+
+.servico h2{
+  font-size: 2em;
+  color: #e79924;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.servico div div{
+  display: flex;
+  justify-content: space-around;
+}
+
+.servico div div div{
+  width: 30%;
+}
+
+.servico a:hover{
+  background: #b2360f;
+}
+
+.servico p {
+  font-size: 1em;
+  text-align: justify;
+  line-height: 1.5em; /*espaçamento entre linhas*/
+  background: #333;
+  padding: 20px;
+}
+
+.faixaServico{
+  background: #ccc;
+  height: 200px;
+  margin-top: -7.4%;
+  border-top: solid thin #e79924;
+} 
+
+/*####################### SESSÃO TECNOLOGIA #######################*/
+
+.tec{
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 70px;
+}
+
+/*titulo e paragrafo*/
+
+.tecTitulo{
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.4em;
+
+}
+
+.tecTitulo h2{
+  max-width: 500px;
+  font-size: 2.1em;
+  text-align: right;
+  text-transform: capitalize;
+}
+
+.tecTitulo div{
+  width: 45%;
+  justify-content: space-between;
+}
+
+/*área infografico*/
+.infografico{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.caixasTec div{
+  display: flex;
+  height: 124px;
+  background: #333;
+  margin-top: 45px; /*aq a margin ta separando os blocos*/
+  align-items: center;
+  justify-content: space-between;
+}
+
+.caixasTec div img{
+  max-width: 90px;
+  margin-right: -45px;
+}
+
+.caixasTec div div{
+  color: #ccc;
+  margin: 20px; /*margin dentro da caixa*/
+  max-width: 250px;
+}
+
+.caixasTecDireita div{
+  display: flex;
+  height: 124px;
+  background: #333;
+  margin-top: 45px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.caixasTecDireita div img{
+  max-width: 90px;
+  margin-left: -45px; /*aq q teve mundança - ao invés de margin-right troquei por left*/
+}
+
+.caixasTecDireita div div{
+  color: #ccc;
+  margin: 20px;
+  max-width: 250px;
+}
+
+/*TUDO CERTO ATÉ AQ */
+
+/*O Q O PROF FEZ
+
+.tecBoxEsquerda
+.tecBoxDireita
+
+o paragrafo ñ tá em uma div separada
+
+.tecCorpo{
+  display: flex;
+  justify-content: space-between;
+  width: 90;
+  margin: 40px auto; pra centralizar na tela - diminuiu de 100% p 90% e centralizou
+}
+
+.tecCorpo > div{   > pegue o filho direto 
+  width: 29%
+}
+
+.tecBoxEsquerda p{
+  
+}
+
+.tecBoxEsquerda,      //pra pegar duas classes
+.tecBoxDireita{
+  display: flex;
+  background: #333/
+  margin: 40px 0;
+  height: 100px;
+}
+
+.tecBoxEsquerda img,      
+.tecBoxDireita img{
+  padding: 10px;
+  position: relative;
+  left: 55px;
+} 
+
+.tecBoxEsquerda img{
+  left: 55px;
+}
+
+.tecBoxDireita img{
+  right: 55px;
+}*/
